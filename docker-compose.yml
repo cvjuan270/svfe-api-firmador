@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.3'
 
 services:
   svfe-api-firmador:
@@ -12,22 +12,9 @@ services:
     env_file:
       - .env  # Archivo separado para variables de entorno
     volumes:
-      - svfe_temp:/uploads
+      - "./certificados:/uploads"
     networks:
       - svfe_network
-    deploy:
-      resources:
-        limits:
-          cpus: "1.0"
-          memory: "120M"
-      restart_policy:
-        condition: on-failure
-        delay: 5s
-        max_attempts: 3
-        window: 120s
-
-volumes:
-  svfe_temp:
 
 networks:
   svfe_network:
