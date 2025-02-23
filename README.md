@@ -37,3 +37,5 @@ docker-compose up -d
 ```sh
 docker ps
 ```
+### Certificados
+En la carpeta `certificados`, tienen que ir los certificades `<nit>.crt`
